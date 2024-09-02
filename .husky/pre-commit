@@ -1,3 +1,22 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-npx lint-staged
+echo "checking for eslint verfication hi
+
+
+npx eslint '**/*.{js,jsx,ts,tsx}' --quiet --fix
+ESLINT_STATUS=$?
+
+if [ $ESLINT_STATUS -ne 0 ]; then
+  echo "ESLint found issues. Please fix them before committing."
+  exit $ESLINT_STATUS
+fi
+
+echo "Running Prettier..."
+
+npx prettier --write .
+PRETTIER_STATUS=$?
+
+if [ $PRETTIER_STATUS -ne 0 ]; then
+  echo "Prettier found issues. Please fix them before committing."
+  exit $PRETTIER_STATUS
+fi
+
+echo "ESLint and Prettier passed. Proceeding with commit."
