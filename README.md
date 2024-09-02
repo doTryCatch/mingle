@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A modern couple matchmaking app designed to connect hearts effortlessly. Built with a focus on user experience and smart algorithms to create meaningful connections.
 
 ## Getting Started
 
