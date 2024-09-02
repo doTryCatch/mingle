@@ -1,5 +1,5 @@
 echo "validation eslint and prettier"
-npx '**/*.{js,jsx,tseslint ,tsx}' --quiet --fix || {
+npx eslint '**/*.{js,jsx,ts,tsx}' --quiet --fix || {
     echo "😥 Eslint error Occured.... First fix the eslint error mentioned above then commit will be possible"
     exit 1
 }
