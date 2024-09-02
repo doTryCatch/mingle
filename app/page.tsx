@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Logo from "../public/logo/logo.png";
 import Image from "next/image";
-let person;
 export default function Home() {
   const Login = true;
   const router = useRouter();

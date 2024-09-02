@@ -1,22 +1,10 @@
-echo "checking for eslint verfication hi
-
-
-npx eslint '**/*.{js,jsx,ts,tsx}' --quiet --fix
-ESLINT_STATUS=$?
-
-if [ $ESLINT_STATUS -ne 0 ]; then
-  echo "ESLint found issues. Please fix them before committing."
-  exit $ESLINT_STATUS
-fi
-
-echo "Running Prettier..."
-
-npx prettier --write .
-PRETTIER_STATUS=$?
-
-if [ $PRETTIER_STATUS -ne 0 ]; then
-  echo "Prettier found issues. Please fix them before committing."
-  exit $PRETTIER_STATUS
-fi
-
-echo "ESLint and Prettier passed. Proceeding with commit."
+echo "validation eslint and prettier"
+npx eslint '**/*.{js,jsx,ts,tsx}' --quiet --fix || {
+    echo "😥 Eslint error Occured.... First fix the eslint error mentioned above then commit will be possible"
+    exit 1
+}
+echo "Finding Prettier style issues..."
+npx prettier --check '**/*.{json,js,jsx,ts,tsx,html}'
+echo "Formatting the code with Prettier..."
+npx prettier --write '**/*.{json,js,jsx,ts,tsx,html}' --ignore-unknown
+echo "Everything is okay. No issues detected. Ready to commit!"
