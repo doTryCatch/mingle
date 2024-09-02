@@ -8,4 +8,4 @@ echo "Finding Prettier style issues..."
 npx prettier --check '**/*.{json,js,jsx,ts,tsx,html}'
 echo "Formatting the code with Prettier..."
 npx prettier --write '**/*.{json,js,jsx,ts,tsx,html}' --ignore-unknown
-echo "Everything is okay. No issues detected. Ready to commit!"
+echo "😎😎 Everything is okay. No issues detected. Ready to commit!💪"
