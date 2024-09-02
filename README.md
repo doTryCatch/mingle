@@ -7,10 +7,16 @@ A modern couple matchmaking app designed to connect hearts effortlessly. Built w
 ## How to run this project
 
 ```bash
-git clone [git@github.com:doTryCatch/mingle.git]
-Navigate to the current directory where is project file are present.
 
-npm run dev
+git clone `git@github.com:doTryCatch/mingle.git`
+
+Navigate to the current directory.
+
+cd mingle
+
+run command:
+
+npm `run dev`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
