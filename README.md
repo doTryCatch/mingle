@@ -1,6 +1,6 @@
 A modern couple matchmaking app designed to connect hearts effortlessly. Built with a focus on user experience and smart algorithms to create meaningful connections.
 
-## Rewuirements
+## Requirements
 
 [nodejs](https://nodejs.org/en/download/prebuilt-installer) should be installed
 
@@ -20,6 +20,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 
 
-## Contribution
-those who want to contribute
+
 ```
+
+## Contribution
+
+those who want to contribute
